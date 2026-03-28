@@ -3,6 +3,7 @@ using PortalCampanasComerciales.Models;
 using PortalCampanasComerciales.Services;
 
 namespace PortalCampanasComerciales.Controllers;
+// Modificado en rama feature/resumen-campanas - Agregado lógica de resumen
 
 public class CampanasController : Controller
 {

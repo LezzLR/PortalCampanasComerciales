@@ -1,8 +1,34 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio - Portal de Campañas";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4 fw-bold text-danger">Portal de Campañas Comerciales</h1>
+            <p class="lead mt-3">Herramienta interna para el equipo de Marketing</p>
+            
+            <div class="mt-5">
+                <a asp-controller="Campanas" asp-action="Index" 
+                   class="btn btn-danger btn-lg px-5 py-3">
+                    Ver Listado de Campañas
+                </a>
+            </div>
+
+            <div class="mt-4">
+                <a asp-controller="Campanas" asp-action="Resumen" 
+                   class="btn btn-outline-secondary btn-lg px-5">
+                    Ver Resumen de Indicadores
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <strong>Estado actual:</strong> Datos cargados en memoria • Sin base de datos • Sin autenticación
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,42 @@
+@model PortalCampanasComerciales.Models.Campana
+
+@{
+    ViewData["Title"] = "Detalle de Campaña";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>@Model.Nombre</h2>
+            <hr>
+
+            <dl class="row">
+                <dt class="col-sm-3">Categoría</dt>
+                <dd class="col-sm-9">@Model.Categoria</dd>
+
+                <dt class="col-sm-3">Estado</dt>
+                <dd class="col-sm-9">
+                    <span class="badge @(Model.Estado == "Vigente" ? "bg-success" : Model.Estado == "Próxima" ? "bg-warning" : "bg-secondary")">
+                        @Model.Estado
+                    </span>
+                </dd>
+
+                <dt class="col-sm-3">Fechas</dt>
+                <dd class="col-sm-9">@Model.FechaInicio.ToString("dd/MM/yyyy") - @Model.FechaFin.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-3">Canal</dt>
+                <dd class="col-sm-9">@Model.Canal</dd>
+
+                <dt class="col-sm-3">Descuento</dt>
+                <dd class="col-sm-9"><strong>@Model.DescuentoPct %</strong></dd>
+
+                <dt class="col-sm-3">Descripción</dt>
+                <dd class="col-sm-9">@Model.Descripcion</dd>
+            </dl>
+
+            <div class="mt-4">
+                <a asp-action="Index" class="btn btn-secondary">← Volver al listado</a>
+            </div>
+        </div>
+    </div>
+</div>

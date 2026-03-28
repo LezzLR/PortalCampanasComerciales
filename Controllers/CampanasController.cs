@@ -4,10 +4,12 @@ using PortalCampanasComerciales.Services;
 
 namespace PortalCampanasComerciales.Controllers;
 
-// === MODIFICADO EN RAMA feature/resumen-campanas - LÓGICA DE RESUMEN ===
+// CONFLICTO GENERADO - Rama: feature/resumen-campanas
+// Se agregó lógica de resumen y cálculos de indicadores aquí
 
 public class CampanasController : Controller
 {
+    // ... el resto del código queda igual
     // Listado + Filtros
     public IActionResult Index(string? categoria, string? estado)
     {

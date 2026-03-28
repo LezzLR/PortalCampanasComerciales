@@ -4,7 +4,8 @@ using PortalCampanasComerciales.Services;
 
 namespace PortalCampanasComerciales.Controllers;
 
-// === MODIFICADO EN RAMA feature/filtro-campanas ===
+// CONFLICTO GENERADO - Rama: feature/filtro-campanas
+// Se agregó lógica de filtros avanzados aquí
 
 public class CampanasController : Controller
 {

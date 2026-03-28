@@ -3,6 +3,7 @@ using PortalCampanasComerciales.Models;
 using PortalCampanasComerciales.Services;
 
 namespace PortalCampanasComerciales.Controllers;
+// Modificado en rama feature/filtro-campanas - Agregado filtro avanzado
 
 public class CampanasController : Controller
 {

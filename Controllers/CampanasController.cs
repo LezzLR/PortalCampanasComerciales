@@ -6,10 +6,10 @@ namespace PortalCampanasComerciales.Controllers;
 
 // CONFLICTO GENERADO - Rama: feature/resumen-campanas
 // Se agregó lógica de resumen y cálculos de indicadores aquí
-
-public class CampanasController : Controller
-{
-    // ... el resto del código queda igual
+ public class CampanasController : Controller
+ // Línea agregada directamente en develop para forzar conflicto
+                                                                            {
+  // ... el resto del código queda igual
     // Listado + Filtros
     public IActionResult Index(string? categoria, string? estado)
     {

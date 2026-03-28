@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Resumen de Campañas";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Resumen de Campañas Comerciales</h2>
+
+    <div class="row g-4">
+        <!-- Tarjetas de indicadores -->
+        <div class="col-md-3">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <h3 class="text-primary">@ViewBag.TotalCampanas</h3>
+                    <p class="card-text fw-bold">Total de Campañas</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100 border-success">
+                <div class="card-body">
+                    <h3 class="text-success">@ViewBag.Vigentes</h3>
+                    <p class="card-text fw-bold">Campañas Vigentes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100 border-warning">
+                <div class="card-body">
+                    <h3 class="text-warning">@ViewBag.Proximas</h3>
+                    <p class="card-text fw-bold">Campañas Próximas</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100 border-secondary">
+                <div class="card-body">
+                    <h3 class="text-secondary">@ViewBag.Finalizadas</h3>
+                    <p class="card-text fw-bold">Campañas Finalizadas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h4>Promedio de Descuento</h4>
+        <h2 class="text-danger">@ViewBag.PromedioDescuento %</h2>
+    </div>
+
+    <div class="mt-5">
+        <h4>Campañas por Canal</h4>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Canal</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.PorCanal != null)
+                {
+                    foreach (var item in ViewBag.PorCanal)
+                    {
+                        <tr>
+                            <td>@item.Canal</td>
+                            <td>@item.Cantidad</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">← Volver al listado</a>
+    </div>
+</div>
